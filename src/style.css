@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(241, 245, 249);
+}
+
+.bg-normal {
+  background-color: #a8a77a;
+}
+.bg-fire {
+  background-color: #ee8130;
+}
+.bg-water {
+  background-color: #6390f0;
+}
+.bg-electric {
+  background-color: #f7d02c;
+}
+.bg-grass {
+  background-color: #7ac74c;
+}
+.bg-ice {
+  background-color: #96d9d6;
+}
+.bg-fighting {
+  background-color: #c22e28;
+}
+.bg-poison {
+  background-color: #a33ea1;
+}
+.bg-ground {
+  background-color: #e2bf65;
+}
+.bg-flying {
+  background-color: #a98ff3;
+}
+.bg-psychic {
+  background-color: #f95587;
+}
+.bg-bug {
+  background-color: #a6b91a;
+}
+.bg-rock {
+  background-color: #b6a136;
+}
+.bg-ghost {
+  background-color: #735797;
+}
+.bg-dragon {
+  background-color: #6f35fc;
+}
+.bg-dark {
+  background-color: #705746;
+}
+.bg-steel {
+  background-color: #b7b7ce;
+}
+.bg-fairy {
+  background-color: #d685ad;
+}
+
+.bg-shadow {
+  background-color: #384657;
+}
+
+.bg-physical {
+  background-color: #ef6845;
+}
+
+.bg-special {
+  background-color: #61adf3;
+}
+
+.bg-status {
+  background-color: #96999a;
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 2px 4px 0 rgba(31, 38, 135, 0.07);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all 300ms;
+}
+
+.bg-illuminating-emerald {
+  background-color: #00916e;
+}
