@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Mntsrt;
+  src: url(../Montserrat-VariableFont_wght.ttf);
+}
+
 body {
   background-color: rgb(241, 245, 249);
+}
+
+* {
+  font-family: Mntsrt;
 }
 
 .bg-normal {

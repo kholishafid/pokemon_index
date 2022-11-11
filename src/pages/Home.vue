@@ -3,10 +3,9 @@
 
         <div class="">
 
-            <div class="mx-10 mb-10">
+            <div class="mx-5 sm:mx-10">
                 <div class="w-1/2 sm:w-1/3 mx-auto mb-10">
-                    <img src="https://archives.bulbagarden.net/media/upload/d/d2/Pok%C3%A9mon_logo_English.png"
-                        alt="pokemon_logo">
+                    <img src="/Pokémon_logo_English.png" alt="pokemon_logo">
                 </div>
                 <p class="mb-5">
                     Pokémon (Japanese: ポケットモンスター Pocket Monsters, ポケモン Pokémon for short), sometimes shortened to PKMN,
@@ -48,7 +47,7 @@
             <div>
                 <div class="flex flex-wrap">
                     <div v-for="pokemon in pokemonList" :key="pokemon" class="w-1/2 md:w-1/4 lg:w-1/5  p-2 relative">
-                        <div class="rounded border drop-shadow-sm cursor-pointer">
+                        <div class="rounded cursor-pointer">
                             <Suspense>
                                 <Card :pokeurl="pokemon.url" />
                                 <template #fallback>
@@ -59,10 +58,10 @@
                     </div>
                 </div>
                 <div class="m-5 flex justify-center">
-                    <button class="border px-2 py-1 shadow w-20 rounded-l-md bg-white"
+                    <button class="px-2 py-2 w-28 rounded-l-md bg-white"
                         @click="fetchResult.previous ? fetchPokemon(fetchResult.previous) : false"
                         v-if="fetchResult">Previous</button>
-                    <button class="border px-2 py-1 shadow w-20 rounded-r-md bg-white"
+                    <button class="px-2 py-2 w-28 rounded-r-md bg-white"
                         @click="fetchPokemon(fetchResult.next)">Next</button>
                 </div>
             </div>

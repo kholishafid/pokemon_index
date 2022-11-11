@@ -3,9 +3,9 @@
         <img :src="pokemonData.sprites.front_default" alt="">
         <div class="absolute top-0 right-1.5 text-slate-500 text-sm">{{ pokemonData.order }}</div>
     </div>
-    <div class=" bg-white rounded-b-md">
+    <div class=" bg-white rounded-b-md p-2">
         <div class="px-2 pt-2">
-            <h3 class="mb-2 first-letter:uppercase">{{ pokemonData.name }}</h3>
+            <h3 class="mb-3 first-letter:uppercase">{{ pokemonData.name }}</h3>
         </div>
         <div class="flex text-sm relative px-2 pb-2">
             <div v-for="ptype in pokemonData.types" :key="ptype">

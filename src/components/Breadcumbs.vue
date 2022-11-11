@@ -1,5 +1,5 @@
 <template>
-    <div class="flex mx-6 my-5 bg-glass w-fit px-5 rounded-full py-2">
+    <div class="flex mx-6 my-5 bg-white w-fit px-5 rounded-full py-2">
         <div>
             <router-link to="/" class="router">Home</router-link>
             <span class="mx-2">/</span>

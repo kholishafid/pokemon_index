@@ -1,5 +1,5 @@
 <template>
-    <nav class="px-7 py-4 bg-slate-300 m-5 rounded-full sticky top-5 z-10 flex justify-between">
+    <nav class="px-7 py-4 bg-slate-300 mb-5 sticky top-0 z-10 flex justify-between">
         <div class="flex">
             <router-link to="/" class="text-lg font-semibold">PokéApp</router-link>
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"

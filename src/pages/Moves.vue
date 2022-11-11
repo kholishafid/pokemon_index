@@ -16,10 +16,9 @@
             </div>
         </div>
         <div class="m-5 flex justify-center">
-            <button class="border px-2 py-1 shadow w-20 rounded-l-md bg-white"
+            <button class="px-2 py-2 w-28 rounded-l-md bg-white"
                 @click="moveData.previous ? getMoveList(moveData.previous) : false" v-if="moveData">Previous</button>
-            <button class="border px-2 py-1 shadow w-20 rounded-r-md bg-white"
-                @click="getMoveList(moveData.next)">Next</button>
+            <button class="px-2 py-2 w-28 rounded-l-md bg-white" @click="getMoveList(moveData.next)">Next</button>
         </div>
     </div>
 </template>
