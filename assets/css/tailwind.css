@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container-base {
+    @apply max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl xl:max-w-7xl mx-auto px-4;
+  }
+}
