@@ -21,11 +21,7 @@ checkIsCached(params.id);
   <section class="flex items-center md:mb-12 relative">
     <NuxtLink to="/" class="absolute left-0">
       <ButtonIcon>
-        <img
-          src="~~/assets/icon/arrow-left.svg"
-          alt="back"
-          class="w-4 md:w-6"
-        />
+        <img src="~~/assets/icon/arrow-left.svg" alt="back" class="w-6" />
       </ButtonIcon>
     </NuxtLink>
 
@@ -41,15 +37,11 @@ checkIsCached(params.id);
     <div v-if="currentData" class="flex sm:gap-1 lg:gap-4 absolute right-0">
       <NuxtLink :to="`/preview/${params.id}`">
         <ButtonIcon>
-          <img
-            src="~~/assets/icon/play-circle.svg"
-            alt="preview-icon"
-            class="w-4 md:w-6"
-          />
+          <img src="~~/assets/icon/play-circle.svg" alt="preview-icon" class="w-6" />
         </ButtonIcon>
       </NuxtLink>
       <ButtonIcon @click="handleSave">
-        <img src="~~/assets/icon/save.svg" alt="save-icon" class="w-4 md:w-6" />
+        <img src="~~/assets/icon/save.svg" alt="save-icon" class="w-6" />
       </ButtonIcon>
     </div>
   </section>
@@ -102,14 +94,16 @@ checkIsCached(params.id);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: fit-content 1fr;
     grid-template-areas:
-      "sprite type"
-      "stats stats";
+      "sprite stats"
+      "type type";
     gap: 2rem;
   }
+
   .grid__item-sprite {
     margin: auto 0;
     padding: 0;
   }
+
   .grid__item-type {
     margin: auto 0;
   }

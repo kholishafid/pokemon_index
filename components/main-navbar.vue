@@ -9,5 +9,5 @@
       </ButtonIcon>
     </NuxtLink>
   </header>
-  <hr class="mb-8 border-white/10">
+  <hr class="mb-4 md:mb-8 border-white/10">
 </template>
