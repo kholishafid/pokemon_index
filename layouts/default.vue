@@ -1,10 +1,13 @@
 <template>
   <VitePwaManifest />
-  <div class="container-base h-screen flex flex-col">
+
+
+  <UNotifications />
+  <div class="min-h-screen flex flex-col">
     <MainNavbar />
-    <div class="flex-1">
+    <UContainer class="w-full mx-auto max-w-7xl flex-1 flex flex-col px-2 sm:px-8">
       <slot />
-    </div>
+    </UContainer>
     <Footer />
   </div>
 </template>

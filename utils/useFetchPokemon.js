@@ -3,7 +3,7 @@
  * @param {string} url
  * @return {object} object `{count, previous , results}`
  */
-async function fetchPage(url = 'https://pokeapi.co/api/v2/pokemon?limit=5&offset=0') {
+async function fetchPage(url = 'https://pokeapi.co/api/v2/pokemon?limit=6&offset=0') {
   return await fetch(`/api/pokemon`, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },

@@ -19,28 +19,45 @@ onMounted(() => {
 
 <template>
   <div
-    class="w-full min-h-[12rem] sm:min-h-[10rem] rounded-lg p-4 sm:p-6 md:p-8 flex items-center bg-white/5 mb-3 md:mb-6 overflow-hidden relative gradient md:min-h-[14rem] cursor-pointer rela"
-    :style="`background-image: ${backgroundMesh}`" @click="$router.push(`/detail/${idHero}`)">
-    <ButtonIcon
-      class="absolute bottom-2 right-2 rounded-full p-2 bg-[#1e1e1e] hover:bg-[#333333] z-50 pointer-events-auto"
-      @click="reshuffle">
-      <img src="~~/assets/icon/refresh-cw.svg" class="w-4 h-4" alt="refresh-btn" />
-    </ButtonIcon>
-    <HeroCard v-if="pokemonHero">
-      <span class="text-slate-50 text-xl font-bold md:text-3xl">{{
-        useCapitalize(pokemonHero.name)
-      }}</span>
-      <span class="text-slate-200 text-xl md:text-3xl"> #{{ idHero }}</span>
-      <div class="flex gap-2 sm:gap-2 justify-center mt-1">
-        <span v-for="item in pokemonHero.types" :key="item">
-          <Type :label="item.type.name" />
-        </span>
+    class="gradient overflow-hidden rounded-lg divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 shadow bg-white dark:bg-gray-900 h-full w-full cursor-pointer card-gradient divide-y-0 p-6 flex items-center relative col-span-2 md:col-span-3 lg:col-span-2 xl:col-span-4 max-sm:min-h-[170px] aspect-[2/1] md:aspect-[3/1] lg:aspect-[2/1] xl:aspect-[4/1]"
+    :style="`background-image: ${backgroundMesh}`"
+    @click="$router.push(`/detail/${idHero}`)"
+    v-if="pokemonHero"
+  >
+    <div class="w-[70%]">
+      <div>
+        <h3 class="capitalize text-3xl xl:text-4xl font-bold mb-1">{{ pokemonHero.name }}</h3>
+        <div class="flex gap-2 max-md:py-2 mb-2">
+          <Type
+            v-for="item in pokemonHero.types"
+            :key="item.name"
+            :label="item.type.name"
+          />
+        </div>
+        <div class="hidden sm:grid sm:grid-cols-2 bg-black/20 p-2 gap-y-2 rounded-md lg:px-4">
+          <div
+            v-for="(val, idx) in pokemonHero.stats"
+            :key="val"
+          >
+            <span class="text-xs font-medium xl:text-sm capitalize">{{ val.stat.name }} : {{ val.base_stat }}</span>
+          </div>
+        </div>
       </div>
-    </HeroCard>
-    <SkeletonHeroCard v-else />
-    <div class="absolute right-5 top-1/2 -translate-y-1/2 md:right-8 px-4 sm:px-6 md:px-8">
-      <HeroSprite :id="idHero" :name="idHero" v-if="pokemonHero" />
-      <SkeletonSprite v-else />
+    </div>
+
+    <div class="w-[30%] grid items-center justify-center">
+      <div class="justify-center">
+        <Sprite :id="idHero" />
+      </div>
+      <UButton
+        color="gray"
+        class="absolute bottom-2 right-2 z-50 pointer-events-auto"
+        size="2xs"
+        @click="reshuffle"
+      >
+        Shuffle
+      </UButton>
     </div>
   </div>
+  <SkeletonHero v-else />
 </template>

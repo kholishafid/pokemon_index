@@ -1,9 +1,19 @@
 <template>
   <div
-    class="w-full min-h-[8rem] sm:min-h-[10rem] rounded-lg p-4 sm:p-6 md:p-8 flex items-center bg-white/5 mb-3 md:mb-6 overflow-hidden relative gradient md:min-h-[14rem]">
-    <SkeletonHeroCard />
-    <div class="absolute right-5 top-1/2 -translate-y-1/2 md:right-8 px-4 sm:px-6 md:px-8">
-      <SkeletonSprite />
+    class="overflow-hidden rounded-lg divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 shadow bg-white dark:bg-gray-900 h-full w-full cursor-pointer card-gradient divide-y-0 p-6 flex items-center relative col-span-2 md:col-span-3 lg:col-span-2 xl:col-span-4 max-sm:min-h-[170px] aspect-[2/1] md:aspect-[3/1] lg:aspect-[2/1] xl:aspect-[4/1]"
+  >
+    <div class="w-[70%] flex flex-col">
+      <USkeleton class="w-40 h-8 mb-2" />
+      <span class="flex gap-2 mb-2">
+        <USkeleton class="w-10 h-5" />
+        <USkeleton class="w-10 h-5" />
+      </span>
+      <USkeleton class="w-full h-20 mb-2 max-sm:hidden" />
+    </div>
+    <div class="w-[30%] grid items-center justify-center">
+      <div class="justify-center">
+        <SkeletonSprite />
+      </div>
     </div>
   </div>
 </template>

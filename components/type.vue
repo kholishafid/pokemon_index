@@ -5,8 +5,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <span class="p-1 text-slate-50 px-2 xl:px-3 xl:py-0.5 rounded-lg font-bold text-xs sm:text-base md:text-md"
-    :class="label">
-    <span>{{ useCapitalize(label) }}</span>
-  </span>
+  <span
+    class="inline-flex items-center font-medium rounded-md text-xs px-2 py-1 capitalize"
+    :class="label === 'dark' ? 'dark-l' : label"
+  >{{ label }}</span>
 </template>

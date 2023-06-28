@@ -13,22 +13,25 @@ onMounted(() => {
 </script>
 
 <template>
-  <template v-if="currentPage">
-    <PokemonListWrapper>
+  <PokemonListWrapper>
+    <Hero />
+    <template v-if="currentPage">
       <div
         v-for="item in currentPage.results"
-        class="w-full aspect-square relative"
+        class="w-full aspect-[1/1] relative"
       >
         <PokemonListCard :item="item" />
       </div>
-    </PokemonListWrapper>
-  </template>
-  <template v-else>
-    <PokemonListWrapper>
-      <div v-for="i in 5" :key="i" class="w-full aspect-square relative">
+    </template>
+    <template v-else>
+      <div
+        v-for="i in 6"
+        :key="i"
+        class="w-full aspect-square relative"
+      >
         <SkeletonCard />
       </div>
-    </PokemonListWrapper>
-  </template>
+    </template>
+  </PokemonListWrapper>
   <PokemonListPagination />
 </template>

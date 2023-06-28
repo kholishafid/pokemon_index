@@ -22,6 +22,9 @@ export const usePokemonBoxStore = defineStore('pokemonBox', {
         if (detailStore.dataCached[elem]) list.push(detailStore.dataCached[elem])
       })
       return list
+    },
+    checkIsSaved: (state) => {
+      return (id) => state.box.find(idP => idP === id)
     }
   },
   persist: {

@@ -1,6 +1,9 @@
 <template>
-  <hr class="mb-8 mt-4 md:mt-8 border-white/10" />
-  <div class="font-semibold rounded-full text-center text-slate-50 pb-8">
-    Pokemon Index - Build with 🔥🔥 by <strong>@kholis_hafid</strong>
-  </div>
+  <footer>
+    <UContainer class="border-t border-gray-200 dark:border-gray-800 py-6 mt-4">
+      <p class="text-xs text-center">
+        Pokemon Index - Build with 🔥🔥 by <strong>@kholis_hafid</strong>
+      </p>
+    </UContainer>
+  </footer>
 </template>
