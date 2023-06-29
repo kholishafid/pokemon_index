@@ -6,7 +6,7 @@ const props = defineProps({
 
 <template>
   <span
-    class="inline-flex items-center font-medium rounded-md text-xs px-2 py-1 capitalize"
+    class="inline-flex items-center font-medium rounded-md text-xs px-2 py-1 capitalize text-white"
     :class="label === 'dark' ? 'dark-l' : label"
   >{{ label }}</span>
 </template>

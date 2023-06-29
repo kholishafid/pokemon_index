@@ -1,54 +1,71 @@
 .normal {
   background-color: #544d3e;
 }
+
 .fire {
   background-color: #8e3e19;
 }
+
 .water {
   background-color: #28518e;
 }
+
 .electric {
   background-color: #9d920f;
 }
+
 .grass {
   background-color: #4c6d29;
 }
+
 .ice {
   background-color: #578585;
 }
+
 .fighting {
   background-color: #6b1e1a;
 }
+
 .poison {
   background-color: #682463;
 }
+
 .ground {
   background-color: #83643e;
 }
+
 .flying {
   background-color: #604f97;
 }
+
 .psychic {
   background-color: #a63361;
 }
+
 .bug {
   background-color: #596418;
 }
+
 .rock {
   background-color: #64592e;
 }
+
 .ghost {
   background-color: #493f64;
 }
+
 .dragon {
   background-color: #4628b6;
 }
+
 .dark-l {
   background-color: #4f4138;
 }
+
 .steel {
   background-color: #747489;
 }
+
 .fairy {
   background-color: #944c6a;
 }
@@ -57,11 +74,38 @@
   width: 10px;
 }
 
-::-webkit-scrollbar-track {
-  background-color: #1e1e1e;
+html:not([class="dark"]) {
+  .card-gradient {
+    background-image: radial-gradient(
+      at 80% 90%,
+      hsla(95, 98%, 77%, 0.5) 0px,
+      transparent 90%
+    );
+  }
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #b0ee83;
-  border-radius: 3px;
+html:not([class="dark"]) ::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+@media (prefers-color-scheme: light) {
+  ::-webkit-scrollbar-track {
+    background-color: #eee;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #b0ee83;
+    border-radius: 3px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #b0ee83;
+    border-radius: 3px;
+  }
 }

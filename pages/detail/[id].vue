@@ -249,7 +249,7 @@ const anotData = computed(() => [
               </UButton>
             </template>
 
-            <div class="flex flex-col gap-4 divide-y divide-gray-800">
+            <div class="flex flex-col gap-4 divide-y dark:divide-gray-800 divide-gray-300">
               <template
                 class="border"
                 v-for="evolution in currentData.evo_chain.evolves_to"
@@ -281,7 +281,7 @@ const anotData = computed(() => [
                 </UButton>
               </template>
 
-              <div class="flex flex-col divide-y divide-gray-800">
+              <div class="flex flex-col divide-y dark:divide-gray-800 divide-gray-300">
                 <template v-for="evolution in currentData.evo_chain.evolves_to[0].evolves_to">
                   <NuxtLink
                     :to="useUrlID(evolution.species.url)"
@@ -327,4 +327,5 @@ const anotData = computed(() => [
       </div>
     </section>
   </main>
-<Loader v-else /></template>
+  <Loader v-else />
+</template>

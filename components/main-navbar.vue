@@ -18,7 +18,7 @@ defineShortcuts({
   escape: {
     usingInput: true,
     whenever: [isOpen],
-    handler: () => isOpen.value = false
+    handler: () => isOpen.value = falsecomputer - desktop
   }
 })
 </script>
@@ -42,10 +42,11 @@ defineShortcuts({
         <strong>Pokemon Index</strong>
       </NuxtLink>
       <div class="flex gap-3">
+        <ThemeSwitcher />
         <UTooltip text="Pokemon box">
           <NuxtLink to="/pokebox">
             <UButton
-              icon="i-heroicons-computer-desktop"
+              icon="i-heroicons-archive-box"
               color="gray"
             >
             </UButton>

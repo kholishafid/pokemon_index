@@ -34,7 +34,9 @@ onMounted(() => {
             :label="item.type.name"
           />
         </div>
-        <div class="hidden sm:grid sm:grid-cols-2 bg-black/20 p-2 gap-y-2 rounded-md lg:px-4">
+        <div
+          class="hidden sm:grid sm:grid-cols-2 dark:bg-black/20 bg-white/30 backdrop-blur border-gray-200 border dark:border-0 p-2 gap-y-2 rounded-md lg:px-4"
+        >
           <div
             v-for="(val, idx) in pokemonHero.stats"
             :key="val"

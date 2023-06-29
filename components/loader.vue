@@ -6,7 +6,7 @@
         alt="loading"
         class="w-24"
       />
-      <p class="text-center text-slate-50 text-xs font-medium">Loading....</p>
+      <p class="text-center dark:text-slate-50 text-xs font-medium">Loading</p>
     </div>
   </div>
 </template>

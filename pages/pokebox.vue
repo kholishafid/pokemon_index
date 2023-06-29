@@ -40,7 +40,7 @@ const handleRemove = (ev, id) => {
         </div>
 
         <div class="aspect-[4/1] grid items-center hover:underline cursor-pointer">
-          <p class="text-slate-50 text-center capitalize">
+          <p class="dark:text-slate-50 text-center capitalize text-gray-800">
             {{ mon.name }}
           </p>
         </div>
